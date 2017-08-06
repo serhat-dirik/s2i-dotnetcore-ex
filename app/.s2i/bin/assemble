@@ -11,6 +11,10 @@ DOTNET_STARTUP_PROJECT="${DOTNET_STARTUP_PROJECT:-.}"
 DOTNET_FRAMEWORK="netcoreapp1.1"
 DOTNET_RID=rhel.7-x64
 
+echo "which dotnet"
+which dotnet
+dotnet --info
+
 # npm
 if [ -n "${DOTNET_NPM_TOOLS}" ]; then
   echo "---> Installing npm tools ..."
