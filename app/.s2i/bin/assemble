@@ -12,8 +12,12 @@ DOTNET_STARTUP_PROJECT="${DOTNET_STARTUP_PROJECT:-.}"
 DOTNET_FRAMEWORK="netcoreapp1.1"
 DOTNET_RID=rhel.7-x64
 
-echo "which dotnet"
-which dotnet
+echo "upgrade dotnet"
+wget https://dotnetcli.blob.core.windows.net/dotnet/Sdk/rel-1.1.0/dotnet-dev-fedora.24-x64.latest.tar.gz
+sudo mkdir -p /opt/dotnet
+sudo tar zxf dotnet.tar.gz -C /opt/dotnet
+sudo ln -s /opt/dotnet/dotnet /usr/local/bin
+echo "upgrade completed"
 dotnet --info
 
 # npm
