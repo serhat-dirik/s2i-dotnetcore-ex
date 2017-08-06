@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+echo "Custom assembly is running"
 
 # User settable environment
 DOTNET_CONFIGURATION="${DOTNET_CONFIGURATION:-Release}"
